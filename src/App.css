@@ -1,38 +1,231 @@
-.App {
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #D8D9DA;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navbar styles */
+.navbar {
+  background-color: #0A1D56;
+  color: white;
+  padding: 15px;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 20px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar h2 {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li.selected {
+  background-color: #4caf50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Booking page styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-select {
+  margin-bottom: 20px;
+}
+
+.movie-select h2 {
+  margin-bottom: 10px;
+}
+
+.movie-select ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-select li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.movie-select li.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.seat-map {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 120px;
+  width: 70%;
+  color: #040D12;
+}
+
+.seat-map h2 {
+  margin-bottom: 10px;
+  color: #040D12;
+  text-align: center;
+}
+
+.screen {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 5px;
+}
+
+.seat {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #040D12;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.seat.occupied {
+  background-color: #f44336;
+  color: white;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.legend .key {
+  display: flex;
+  align-items: center;
+}
+
+.legend span{
+  color: #040D12;
+}
+
+.booking-summary {
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.booking-summary h2 {
+  margin-bottom: 10px;
+  color: #040D12;
+
+}
+
+.booking-summary p {
+  margin: 5px 0;
+  color: #040D12;
+
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: #0A1D56;
+  border-radius: 15px;
+}
+
+.heading {
+  color: white;
+  text-align: center;
+}
+input {
+  border-radius: 50px;
+  border: 1px solid aqua;
+  background-color: #E9F6FF;
+  text-align: center;
+  padding: 8px;
+  margin: 13px 20px;
+  width: 250px;
+  color: #D8D9DA;
+}
+h6 {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.btn {
+  display: block;
+  align-items: center;
+  margin-top: 15px;
+  border-radius: 50px;
+  border: 1px solid #F8DE22;
+  padding: 8px 65px;
+  background-color: #040D12;
+  color: #ADC4CE;
+  cursor: pointer;
+}
+.btn_ls {
+  display: block;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px none;
+  padding: 8px 10px;
+  background-color: #040D12;
+  color: #ADC4CE;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.home_btns {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
